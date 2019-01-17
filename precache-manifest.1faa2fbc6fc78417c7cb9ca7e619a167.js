@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/got-logo.00b66283.svg"
   },
   {
-    "revision": "0a8a9f5704409667040f",
-    "url": "/got-web-page/static/css/main.4d7903f8.chunk.css"
+    "revision": "d6e962ea53939d65b730",
+    "url": "/got-web-page/static/css/main.86ad2007.chunk.css"
   },
   {
     "revision": "59e3991a617e08f52df8",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/jon-snow.9ed1f5ee.jpeg"
   },
   {
-    "revision": "0a8a9f5704409667040f",
-    "url": "/got-web-page/static/js/main.0a8a9f57.chunk.js"
+    "revision": "d6e962ea53939d65b730",
+    "url": "/got-web-page/static/js/main.d6e962ea.chunk.js"
   },
   {
     "revision": "0aa4d20d0ca93d0ceec32362c8c7ec7d",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/tyrion-lannister.deecd113.png"
   },
   {
-    "revision": "cfe4bf4c3e6a2d00ed909f9954627aca",
+    "revision": "adcbe1df1c0285b21996283de93f6db8",
     "url": "/got-web-page/index.html"
   }
 ];

@@ -1,7 +1,7 @@
 {
-  "main.css": "/got-web-page/static/css/main.4d7903f8.chunk.css",
-  "main.js": "/got-web-page/static/js/main.0a8a9f57.chunk.js",
-  "main.js.map": "/got-web-page/static/js/main.0a8a9f57.chunk.js.map",
+  "main.css": "/got-web-page/static/css/main.86ad2007.chunk.css",
+  "main.js": "/got-web-page/static/js/main.d6e962ea.chunk.js",
+  "main.js.map": "/got-web-page/static/js/main.d6e962ea.chunk.js.map",
   "static/js/1.59e3991a.chunk.js": "/got-web-page/static/js/1.59e3991a.chunk.js",
   "static/js/1.59e3991a.chunk.js.map": "/got-web-page/static/js/1.59e3991a.chunk.js.map",
   "runtime~main.js": "/got-web-page/static/js/runtime~main.f0cc8438.js",
@@ -13,8 +13,8 @@
   "static/media/arya-stark.jpg": "/got-web-page/static/media/arya-stark.16ba98ac.jpg",
   "static/media/tyrion-lannister.png": "/got-web-page/static/media/tyrion-lannister.deecd113.png",
   "static/media/jon-snow.jpeg": "/got-web-page/static/media/jon-snow.9ed1f5ee.jpeg",
-  "static/css/main.4d7903f8.chunk.css.map": "/got-web-page/static/css/main.4d7903f8.chunk.css.map",
+  "static/css/main.86ad2007.chunk.css.map": "/got-web-page/static/css/main.86ad2007.chunk.css.map",
   "index.html": "/got-web-page/index.html",
-  "precache-manifest.e37444b7fd5f193fd9f3c0ff0ffd00da.js": "/got-web-page/precache-manifest.e37444b7fd5f193fd9f3c0ff0ffd00da.js",
+  "precache-manifest.1faa2fbc6fc78417c7cb9ca7e619a167.js": "/got-web-page/precache-manifest.1faa2fbc6fc78417c7cb9ca7e619a167.js",
   "service-worker.js": "/got-web-page/service-worker.js"
 }
