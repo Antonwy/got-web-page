@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Stlye/HomePage.css';
+import './Style/HomePage.css';
 import NavBar from './Components/NavBar';
 import HomePage from './Components/HomePage/HomePage';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     const {isVisible} = this.state;
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
           <NavBar isVisible={isVisible}/>
           <Route exact path="/" component={HomePage}/>

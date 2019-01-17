@@ -3,7 +3,7 @@ import backImg from '../../Images/got-dragon.jpg';
 import MainHeader from './MainHeader';
 import MainBottomPart from './MainBottomPart';
 import posed from 'react-pose';
-import '../../Stlye/HomePage.css';
+import '../../Style/HomePage.css';
 
 const Background = posed.img({
     visible: {opacity: 1, scale: 1, transition: {duration: 750}},

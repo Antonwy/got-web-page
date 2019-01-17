@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../../Stlye/CharacterPage.css';
+import '../../Style/CharacterPage.css';
 import posed from 'react-pose';
 import CharacterHeader from './CharacterHeader';
 
