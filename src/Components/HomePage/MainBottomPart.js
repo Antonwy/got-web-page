@@ -1,6 +1,6 @@
 import React from 'react'
 import PopularLists from './PopularLists';
-import Article from '../Article';
+import Article from '../CustomComponents/Article';
 
 const MainBottomPart = ({isVisible}) => {
   return (

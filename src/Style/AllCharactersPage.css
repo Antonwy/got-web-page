@@ -1,0 +1,55 @@
+
+.allCharactersBg {
+    background: url(../Images/white-walker.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.characterItem {
+    position: absolute;
+    width: 400px;
+    max-width: 400px;
+    top: 120%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.characterItem h2 {
+    font-family: 'Cormorant SC', serif;
+}
+
+.characterItem p {
+    font-size: 13px;
+    opacity: .8;
+}
+
+.arrowRotate {
+    transform: rotate(180deg);
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.characterItemImage {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Logo from "../Images/got-logo.svg"
-import SearchIcon from '../Images/search-icon.svg'
+import Logo from "../../Images/got-logo.svg"
+import SearchIcon from '../../Images/search-icon.svg'
 import Paragraph from './Paragraph';
 import posed from 'react-pose';
 import { withRouter } from 'react-router-dom'
@@ -17,17 +17,17 @@ const SearchAnim = posed.img({
 
 class NavBar extends Component {
 
-  handleClick = () => {
-    this.props.history.push('/')
+  handleClick = (to) => () => {    
+    this.props.history.push(to)
   }
 
   render() {
     const {isVisible} = this.props;
     return (
       <div className="navBar">
-        <LogoAnim onClick={this.handleClick} pose={isVisible ? 'visible' : 'hidden'} alt="Logo" src={Logo} />
+        <LogoAnim onClick={this.handleClick('/')} pose={isVisible ? 'visible' : 'hidden'} alt="Logo" src={Logo} />
         <div className="navMenu">
-            <Paragraph delay={1} isVisible={isVisible}>Characters</Paragraph>
+            <Paragraph onClick={this.handleClick('allCharacters')} delay={1} isVisible={isVisible}>Characters</Paragraph>
             <Paragraph delay={2} isVisible={isVisible}>Places</Paragraph>
             <Paragraph delay={3} isVisible={isVisible}>About</Paragraph>
             <SearchAnim pose={isVisible ? 'visible' : 'hidden'} alt="Search" src={SearchIcon}/>

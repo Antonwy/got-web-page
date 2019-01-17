@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Stlye/CustomComponents.css'
+import '../../Style/CustomComponents.css'
 import posed from 'react-pose'
 
 const Header = posed.h3({

@@ -1,5 +1,5 @@
 import React from 'react'
-import LineParagraph from '../LineParagraph';
+import LineParagraph from '../CustomComponents/LineParagraph';
 import posed from 'react-pose';
 
 const Header = posed.h1({

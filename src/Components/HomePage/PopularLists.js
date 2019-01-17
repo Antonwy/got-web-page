@@ -1,5 +1,5 @@
 import React from 'react'
-import Paragraph from '../Paragraph';
+import Paragraph from '../CustomComponents/Paragraph';
 import posed from 'react-pose';
 import { withRouter } from 'react-router-dom'
 
@@ -27,7 +27,7 @@ const PopularLists = withRouter(({isVisible, history}) => {
     const handleClick = (name) => {
         history.push({
             pathname: '/character',
-            state: {character: name}
+            state: {character: name, withTransition: true}
         })
     }
 

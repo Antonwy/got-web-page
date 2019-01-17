@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../../Style/CharacterPage.css';
-import posed from 'react-pose';
 import CharacterHeader from './CharacterHeader';
+import Background from '../CustomComponents/Background'
 
 import Daenerys from '../../Images/daenerys.jpg'
 import Jon from '../../Images/jon-snow.jpeg'
@@ -9,10 +9,6 @@ import Arya from '../../Images/arya-stark.jpg'
 import Tyrion from '../../Images/tyrion-lannister.png'
 
 
-const Background = posed.img({
-    visible: {opacity: 1, scale: 1, transition: {duration: 750}},
-    hidden: {opacity: 0, scale: 1.5}
-})
 
 export default class CharacterPage extends Component {
 
@@ -41,11 +37,23 @@ export default class CharacterPage extends Component {
         }
     }
 
+    checkTransition = () => {
+        const {isVisible} = this.state;
+        const transition = this.props.location.state.withTransition;
+        if (isVisible && transition) {
+            return 'visible';
+        }else if(!transition){
+            return 'normal'
+        }else if(!isVisible && transition){
+            return 'hidden'
+        }
+    }
+
   render() {
       const {isVisible, character, background} = this.state;
     return (
       <div>
-        <Background pose={isVisible ? 'visible' : 'hidden'} src={background} alt="Background" className="bg" />
+        <Background pose={this.checkTransition()} style={{backgroundImage: `url(${background})`}} className="bg" />
         <CharacterHeader character={character}/>
       </div>
     )
