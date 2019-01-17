@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+}
+
+h1 {
+  font-family: 'Cormorant SC', serif;
+  font-size: 80px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.bg {
+    background-size: contain;
+}
+
+.characterInfo {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.characterInfo > ul{
+    list-style-type: none;
+}
+
+.characterInfo li {
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    list-style-type: none;
+    font-weight: 100;
+}
+
+.characterInfo span {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Cormorant SC', serif;
+    color: white;
+}

@@ -1,0 +1,20 @@
+.underlineParagraph {
+    position: relative;
+    cursor: pointer;
+    display: table;
+}
+
+.underlineParagraph:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 3px;
+    transition: width 250ms;
+    background-color: rgb(87, 173, 244);
+}
+
+.underlineParagraph:hover:before {
+    width: 100%;
+}   

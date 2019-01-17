@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './Stlye/HomePage.css';
+import NavBar from './Components/NavBar';
+import HomePage from './Components/HomePage/HomePage';
+import { Route, BrowserRouter as Router } from 'react-router-dom'
+import CharacterPage from './Components/CharacterPage/CharacterPage';
+
 
 class App extends Component {
+
+  state = {
+    isVisible: false
+  }
+
+  componentDidMount(){
+    this.setState({isVisible: true})
+  }
+
   render() {
+    const {isVisible} = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <NavBar isVisible={isVisible}/>
+          <Route exact path="/" component={HomePage}/>
+          <Route path="/character" component={CharacterPage}/>
+        </div>
+      </Router>
     );
   }
 }
