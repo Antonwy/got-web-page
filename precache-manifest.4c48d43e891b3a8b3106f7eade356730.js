@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/tyrion-lannister.deecd113.png"
   },
   {
-    "revision": "6c823d53c845a8156751",
-    "url": "/got-web-page/static/css/main.a98f35ce.chunk.css"
+    "revision": "85f6df914e511403463f",
+    "url": "/got-web-page/static/css/main.3257b602.chunk.css"
   },
   {
     "revision": "10c6962e10fa668353bb",
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/arya-stark.16ba98ac.jpg"
   },
   {
-    "revision": "6c823d53c845a8156751",
-    "url": "/got-web-page/static/js/main.6c823d53.chunk.js"
+    "revision": "85f6df914e511403463f",
+    "url": "/got-web-page/static/js/main.85f6df91.chunk.js"
   },
   {
     "revision": "ff1c04d7ddadf5180da67dc030f2a3bb",
@@ -48,11 +48,11 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/search-icon.0aa4d20d.svg"
   },
   {
-    "revision": "e53ddf8f9dcd945c7b9f6ca6e92e2b43",
-    "url": "/got-web-page/static/media/white-walker.e53ddf8f.jpg"
+    "revision": "d7f22e400abe6284ad001de0b39aa1d1",
+    "url": "/got-web-page/static/media/got-characters.d7f22e40.jpg"
   },
   {
-    "revision": "9b1a5352358c8f618f9152f591d8598b",
+    "revision": "0ab4fbf08e8227f2c236a92a2903bec7",
     "url": "/got-web-page/index.html"
   }
 ];
