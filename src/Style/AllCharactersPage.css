@@ -1,6 +1,6 @@
 
 .allCharactersBg {
-    background: url(../Images/white-walker.jpg) no-repeat center center fixed;
+    background: url(../Images/got-characters.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -40,8 +40,6 @@
 
 .arrowRotate {
     transform: rotate(180deg);
-    margin-left: 20px;
-    margin-top: 20px;
 }
 
 .characterItemImage {
@@ -52,4 +50,17 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
+}
+
+.characterImgButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+
+.characterImgButtons img {
+    padding: 30px;
 }

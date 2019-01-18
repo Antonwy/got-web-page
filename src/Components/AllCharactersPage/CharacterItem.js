@@ -9,6 +9,12 @@ const Text = posed.div({
     right: {opacity: 0},
 })
 
+const Arrows = posed.img({
+    middle: {opacity: 1},
+    left: {opacity: 0},
+    right: {opacity: 0},
+})
+
 const Image = posed.div({
   middle: {opacity: 1, width: '22vw', height: '22vw', transition: {duration: 500}},
   left: {opacity: 1, width: '15vw', height: '15vw', transition: {duration: 500}},
@@ -25,10 +31,10 @@ const Image = posed.div({
 })
 
 const Container = posed.div({
-  middle: {opacity: 1, left: 'calc(50vw - 200px)', transition: {duration: 500}},
-  left: {opacity: 1, left: '-200px', transition: {duration: 500}},
-  right: {opacity: 1, left: 'calc(100vw - 200px)', transition: {duration: 500}},
-  hidden: {opacity: 0}
+  middle: {opacity: 1, left: 'calc(50vw - 200px)', transition: {duration: 500}, scale: 1},
+  left: {opacity: 1, left: '-200px', transition: {duration: 500}, scale: 1},
+  right: {opacity: 1, left: 'calc(100vw - 200px)', transition: {duration: 500}, scale: 1},
+  hidden: {opacity: 0, left: 'calc(50vw - 200px)', scale: 0}
 })
 
 class CharacterItem extends React.Component {
@@ -48,7 +54,7 @@ class CharacterItem extends React.Component {
   }
 
   render() {
-    const {character, handleClick} = this.props;
+    const {character, handleClick, isVisible} = this.props;
     let position = 'middle';
     switch (character.pos) {
       case 0:
@@ -69,13 +75,15 @@ class CharacterItem extends React.Component {
     }
     const clickable = this.state.clicked && position === 'middle';
     return (
-      <Container pose={position} className="characterItem">
-        <Image onClick={position === 'middle' ? this.imageClick : ()=>{}} pose={clickable ? 'full' : position} className="characterItemImage" style={{backgroundImage: `url(${character.image})`}}></Image>
+      <Container pose={isVisible ? position : 'hidden'} className="characterItem">
+        <div className="characterImgButtons">
+          {clickable ? <div></div> : <Arrows alt="arrow" src={Arrow} onClick={handleClick(1)}/>}
+          <Image onClick={position === 'middle' ? this.imageClick : ()=>{console.log(position)}} pose={clickable ? 'full' : position} className="characterItemImage" style={{backgroundImage: `url(${character.image})`}}></Image>
+          {clickable ? <div></div> : <Arrows className="arrowRotate" alt="arrow" src={Arrow} onClick={handleClick(-1)}/>}
+        </div>
         {clickable ? <div></div> : <Text pose={position}>
-          <h2>{character.name}</h2>
+          <h2>{position}</h2>
           <p>{character.description}</p>
-          <img alt="arrow" src={Arrow} onClick={handleClick(1)}/>
-          <img className="arrowRotate" alt="arrow" src={Arrow} onClick={handleClick(-1)}/>
         </Text>}
       </Container>
     )

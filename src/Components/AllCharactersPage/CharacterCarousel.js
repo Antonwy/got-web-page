@@ -64,7 +64,7 @@ class CharacterCarousel extends React.Component {
     renderItems = () => {
         const obj = [];
         characterInfo.forEach((item, i) => (
-            obj.push(<CharacterItem key={i} handleClick={this.handleClick} isVisible={i===1 ? true : false} character={item}/>)
+            obj.push(<CharacterItem key={i} handleClick={this.handleClick} isVisible={this.props.isVisible} character={item}/>)
         ))
         return obj;
     }
