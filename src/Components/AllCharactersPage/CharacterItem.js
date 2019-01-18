@@ -82,8 +82,8 @@ class CharacterItem extends React.Component {
           {clickable ? <div></div> : <Arrows className="arrowRotate" alt="arrow" src={Arrow} onClick={handleClick(-1)}/>}
         </div>
         {clickable ? <div></div> : <Text pose={position}>
-          <h2>{position}</h2>
-          <p>{character.name}</p>
+          <h2>{character.name}</h2>
+          <p>{character.description}</p>
         </Text>}
       </Container>
     )
