@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/tyrion-lannister.deecd113.png"
   },
   {
-    "revision": "85f6df914e511403463f",
+    "revision": "e463c994b2489256491f",
     "url": "/got-web-page/static/css/main.3257b602.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/arya-stark.16ba98ac.jpg"
   },
   {
-    "revision": "85f6df914e511403463f",
-    "url": "/got-web-page/static/js/main.85f6df91.chunk.js"
+    "revision": "e463c994b2489256491f",
+    "url": "/got-web-page/static/js/main.e463c994.chunk.js"
   },
   {
     "revision": "ff1c04d7ddadf5180da67dc030f2a3bb",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/got-characters.d7f22e40.jpg"
   },
   {
-    "revision": "0ab4fbf08e8227f2c236a92a2903bec7",
+    "revision": "0ac9682eaf6178fa27c368cb329d8f1a",
     "url": "/got-web-page/index.html"
   }
 ];
