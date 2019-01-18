@@ -83,7 +83,7 @@ class CharacterItem extends React.Component {
         </div>
         {clickable ? <div></div> : <Text pose={position}>
           <h2>{position}</h2>
-          <p>{character.description}</p>
+          <p>{character.name}</p>
         </Text>}
       </Container>
     )
