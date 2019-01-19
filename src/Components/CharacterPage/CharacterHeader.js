@@ -25,11 +25,9 @@ const BigListItem = posed.div({
     hidden: {opacity: 0}
 })
 
-const BUList = posed.ul({
-    visible: {
-        staggerChildren: 250,
-    },
-    hidden: {}
+const VideoButton = posed.p({
+    visible: {opacity: 1, x: 0, delay: 500, transition: {duration: 500}},
+    hidden: {opacity: 0, x: -100}
 })
 
 class CharacterHeader extends React.Component {
@@ -89,23 +87,25 @@ class CharacterHeader extends React.Component {
 
     render() {
         const {character, isVisible} = this.state;
+        const anim = isVisible ? 'visible' : 'hidden';
         return (
             <div>
                 {
                     character ?
                     <div className="characterHeader">
-                        <Header pose={isVisible ? 'visible' : 'hidden'}>{character.name}</Header>
+                        <Header pose={anim}>{character.name}</Header>
+                        <VideoButton pose={anim}>Watch the Video <span onClick={this.props.handleClick(character)}>here</span>.</VideoButton>
                         <div>
-                            <UList pose={isVisible ? 'visible' : 'hidden'} className="characterInfo">
+                            <UList pose={anim} className="characterInfo">
                                 <BigListItem>
                                     <li><span>Aliases:</span></li>
-                                    <UList pose={isVisible ? 'visible' : 'hidden'}>
+                                    <UList pose={anim}>
                                         {character.aliases.map((item, i) => {
                                             return <ListItem key={i}>{item}</ListItem>
                                         })}
                                     </UList>
                                     <li><span>Titles:</span></li>
-                                    <UList pose={isVisible ? 'visible':'hidden'}>
+                                    <UList pose={anim}>
                                         {character.titles.map((item, i) => {
                                             return <ListItem key={i}>{item}</ListItem>
                                         })}
@@ -117,7 +117,7 @@ class CharacterHeader extends React.Component {
                                     <li><span>Culture: </span>{character.culture}</li>
                                     <li><span>Played by: </span>{character.playedBy[0]}</li>
                                     <li><span>Tv-Series:</span></li>
-                                    <UList pose={isVisible ? 'visible' : 'hidden'}>
+                                    <UList pose={anim}>
                                         {character.tvSeries.map((item, i) => {
                                             return <ListItem key={i}>{item}</ListItem>
                                         })}

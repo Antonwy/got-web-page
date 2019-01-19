@@ -20,34 +20,6 @@
   z-index: -1;
 }
 
-.navBar {
-  position: relative;
-  padding: 30px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-.navBar img {
-  width: 100px;
-  cursor: pointer;
-}
-
-.navMenu {
-  display: flex;
-  flex-direction: row;
-}
-
-.navMenu * {
-  margin-left: 30px;
-  cursor: pointer;
-}
-
-.navMenu img {
-  width: 20px;
-}
-
 .mainHeader {
   margin-top: 120px;
 }
@@ -84,4 +56,10 @@
 .storyArticle p {
   font-weight: 100;
   color: rgba(255, 255, 255, 0.849);
+}
+
+@media only screen and (max-width: 700px) {
+  .App {
+    padding: 0 30px 30px 30px;
+  }
 }

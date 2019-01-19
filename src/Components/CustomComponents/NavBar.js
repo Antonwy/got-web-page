@@ -4,6 +4,7 @@ import SearchIcon from '../../Images/search-icon.svg'
 import Paragraph from './Paragraph';
 import posed from 'react-pose';
 import { withRouter } from 'react-router-dom'
+import '../../Style/CustomComponents.css'
 
 const LogoAnim = posed.img({
   visible: {opacity: 1, delay: 250, x: 0},
