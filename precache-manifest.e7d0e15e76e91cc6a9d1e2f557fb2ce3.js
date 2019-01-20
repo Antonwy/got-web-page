@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "0aa4d20d0ca93d0ceec32362c8c7ec7d",
-    "url": "/got-web-page/static/media/search-icon.0aa4d20d.svg"
+    "revision": "56efac77fe04b2a3aaf9ec81602c8b09",
+    "url": "/got-web-page/static/media/play.56efac77.svg"
   },
   {
-    "revision": "88ba698f9f9793dd16b1",
-    "url": "/got-web-page/static/css/main.99df71d1.chunk.css"
+    "revision": "68d3352331696a3dd0f7",
+    "url": "/got-web-page/static/css/main.35d4acff.chunk.css"
   },
   {
-    "revision": "c69ccbf9ce1cf3cad4b3",
-    "url": "/got-web-page/static/js/1.c69ccbf9.chunk.js"
+    "revision": "f7481824dfe790df3c75",
+    "url": "/got-web-page/static/js/1.f7481824.chunk.js"
   },
   {
     "revision": "f0cc8438f3683b6155a1",
@@ -40,16 +40,24 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/got-dragon.8fe8dd26.jpg"
   },
   {
-    "revision": "a321e87275aca0d481e5043242774e1e",
-    "url": "/got-web-page/static/media/main-theme.a321e872.mp3"
-  },
-  {
     "revision": "00b662831dce12878d558767c7925365",
     "url": "/got-web-page/static/media/got-logo.00b66283.svg"
   },
   {
-    "revision": "88ba698f9f9793dd16b1",
-    "url": "/got-web-page/static/js/main.88ba698f.chunk.js"
+    "revision": "0aa4d20d0ca93d0ceec32362c8c7ec7d",
+    "url": "/got-web-page/static/media/search-icon.0aa4d20d.svg"
+  },
+  {
+    "revision": "a321e87275aca0d481e5043242774e1e",
+    "url": "/got-web-page/static/media/main-theme.a321e872.mp3"
+  },
+  {
+    "revision": "68d3352331696a3dd0f7",
+    "url": "/got-web-page/static/js/main.68d33523.chunk.js"
+  },
+  {
+    "revision": "1a326f806847f7579ce1a6bae6f0f1c3",
+    "url": "/got-web-page/static/media/pause.1a326f80.svg"
   },
   {
     "revision": "94ac2bf19193f1f4369698d5e22ab65b",
@@ -96,7 +104,7 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/white-walker.e53ddf8f.jpg"
   },
   {
-    "revision": "49ac916d3ee438231a6708eaac88f148",
+    "revision": "c0b575c08b56063d4e4bb45d57809147",
     "url": "/got-web-page/index.html"
   }
 ];
