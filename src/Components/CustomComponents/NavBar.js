@@ -29,8 +29,8 @@ class NavBar extends Component {
         <LogoAnim onClick={this.handleClick('/')} pose={isVisible ? 'visible' : 'hidden'} alt="Logo" src={Logo} />
         <div className="navMenu">
             <Paragraph onClick={this.handleClick('allCharacters')} delay={1} isVisible={isVisible}>Characters</Paragraph>
-            <Paragraph delay={2} isVisible={isVisible}>Places</Paragraph>
-            <Paragraph delay={3} isVisible={isVisible}>About</Paragraph>
+            <Paragraph onClick={this.handleClick('place')} delay={2} isVisible={isVisible}>Places</Paragraph>
+            <Paragraph onClick={this.handleClick('about')} delay={3} isVisible={isVisible}>About</Paragraph>
             <SearchAnim pose={isVisible ? 'visible' : 'hidden'} alt="Search" src={SearchIcon}/>
         </div>
       </div>
