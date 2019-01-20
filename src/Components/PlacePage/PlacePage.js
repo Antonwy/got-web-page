@@ -69,7 +69,8 @@ export default class PlacePage extends Component {
         isVisible: false,
         animateBlock: false,
         place: Places[0],
-        currIndex: 0
+        currIndex: 0,
+        secondIndex: 0
     }
 
     componentDidMount() {
@@ -78,7 +79,7 @@ export default class PlacePage extends Component {
 
     animateTransition = (dir) => () => {
       const {currIndex} = this.state;
-      this.setState({animateBlock: !this.state.animateBlock})
+      this.setState({animateBlock: !this.state.animateBlock, secondIndex: currIndex})
       setTimeout(() => {
         if(currIndex === Places.length -1 && dir > 0) {
           this.setState({
@@ -97,11 +98,11 @@ export default class PlacePage extends Component {
           })
         }
         this.setState({animateBlock: !this.state.animateBlock})
-      }, 700)
+      }, 300)
     }
 
   render() {
-      const {isVisible, animateBlock, currIndex} = this.state;
+      const {isVisible, animateBlock} = this.state;
       const {place: {name, img}} = this.state;
       console.log(name, img)
       const anim = isVisible ? 'visible' : 'hidden';
@@ -109,7 +110,7 @@ export default class PlacePage extends Component {
       <div>
         <Background style={{backgroundImage: `url(${img})`}} pose={anim} className="bg placeBg"/>
         <PlaceHeader isVisible={animateBlock} anim={anim} transition={this.animateTransition} name={name} />
-        <BlockAnim animateBlock={animateBlock} color={Places[currIndex].color} />
+        <BlockAnim animateBlock={animateBlock} img={Places[this.state.secondIndex].img} />
       </div>
     )
   }

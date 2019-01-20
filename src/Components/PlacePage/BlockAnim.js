@@ -1,34 +1,32 @@
 import React, { Component } from 'react'
 import posed from 'react-pose'
 
+import Volantis from '../../Images/volantis.jpg'
+
 const Container = posed.div({
-    visible: {staggerChildren: 100},
+    visible: {staggerChildren: 0},
     hidden: {staggerChildren: 100}
 })
 
 const Block = posed.div({
-    visible: { height: '100%', backgroundColor: ({color}) =>  color },
-    hidden: { height: '0%', backgroundColor: ({prevColor}) =>  prevColor }
+    visible: { height: '100%', transition: {duration: 0}},
+    hidden: { height: '0%', transition: {duration: 500, ease: 'easeOut'}}
 });
 
-let prevColor = "rgb(54, 96, 142)"
 
 export default class BlockAnim extends Component {
 
     showBlocks = () => {
-        let color = this.props.color;
         const arr = [];
         for (let i = 0; i < 5; i++) {
-            arr.push(<Block className={i % 2 > 0 ? 'start' : 'end'} prevColor={prevColor} color={color} key={i} />)
+            arr.push(<Block className="imgContainer" key={i}><div style={{backgroundImage: `url(${this.props.img})`}}></div></Block>)
         }
-        prevColor = color;
         return arr;
     }
 
     render() {
         const {animateBlock} = this.props;
         const anim = animateBlock ? 'visible' : 'hidden';
-        console.log(anim)
         return (
         <Container className='blockContainer' pose={anim}>
             {

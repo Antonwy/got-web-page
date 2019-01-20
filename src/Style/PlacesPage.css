@@ -21,6 +21,7 @@
 .placeHeader h1 {
     margin: 0;
     padding: 0;
+    z-index: 20;
 }
 
 .placeHeader img {
@@ -46,8 +47,23 @@
     pointer-events: none;
 }
 
-.blockContainer > div {
-    width: calc(100% / 5);
+.imgContainer {
+    position: relative;
+    max-width: calc(100% / 5);
+    overflow: hidden;
+}
+
+.imgContainer > div {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 1;
 }
 
 .start {
