@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "56efac77fe04b2a3aaf9ec81602c8b09",
-    "url": "/got-web-page/static/media/play.56efac77.svg"
+    "revision": "a321e87275aca0d481e5043242774e1e",
+    "url": "/got-web-page/static/media/main-theme.a321e872.mp3"
   },
   {
-    "revision": "68d3352331696a3dd0f7",
-    "url": "/got-web-page/static/css/main.35d4acff.chunk.css"
+    "revision": "82277ec2ed71fc0204ed",
+    "url": "/got-web-page/static/css/main.1b764155.chunk.css"
   },
   {
-    "revision": "f7481824dfe790df3c75",
-    "url": "/got-web-page/static/js/1.f7481824.chunk.js"
+    "revision": "86056fc1b1c1b5b2828a",
+    "url": "/got-web-page/static/js/1.86056fc1.chunk.js"
   },
   {
     "revision": "f0cc8438f3683b6155a1",
@@ -36,6 +36,10 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/tyrion-lannister.deecd113.png"
   },
   {
+    "revision": "634ef704588918ed0e81fc01dfa31d14",
+    "url": "/got-web-page/static/media/volantis.634ef704.jpg"
+  },
+  {
     "revision": "8fe8dd266e516ce431856e2c5c600b50",
     "url": "/got-web-page/static/media/got-dragon.8fe8dd26.jpg"
   },
@@ -48,12 +52,12 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/search-icon.0aa4d20d.svg"
   },
   {
-    "revision": "a321e87275aca0d481e5043242774e1e",
-    "url": "/got-web-page/static/media/main-theme.a321e872.mp3"
+    "revision": "82277ec2ed71fc0204ed",
+    "url": "/got-web-page/static/js/main.82277ec2.chunk.js"
   },
   {
-    "revision": "68d3352331696a3dd0f7",
-    "url": "/got-web-page/static/js/main.68d33523.chunk.js"
+    "revision": "56efac77fe04b2a3aaf9ec81602c8b09",
+    "url": "/got-web-page/static/media/play.56efac77.svg"
   },
   {
     "revision": "1a326f806847f7579ce1a6bae6f0f1c3",
@@ -92,10 +96,6 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/dorne.6ae33cf9.png"
   },
   {
-    "revision": "634ef704588918ed0e81fc01dfa31d14",
-    "url": "/got-web-page/static/media/volantis.634ef704.jpg"
-  },
-  {
     "revision": "d7f22e400abe6284ad001de0b39aa1d1",
     "url": "/got-web-page/static/media/got-characters.d7f22e40.jpg"
   },
@@ -104,7 +104,7 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/white-walker.e53ddf8f.jpg"
   },
   {
-    "revision": "c0b575c08b56063d4e4bb45d57809147",
+    "revision": "e76a00a5bbbaf7e1cc53d06dff40a385",
     "url": "/got-web-page/index.html"
   }
 ];
