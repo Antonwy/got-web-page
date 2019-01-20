@@ -19,7 +19,7 @@ export default class BlockAnim extends Component {
         let color = this.props.color;
         const arr = [];
         for (let i = 0; i < 5; i++) {
-            arr.push(<Block prevColor={prevColor} color={color} key={i} />)
+            arr.push(<Block className={i % 2 > 0 ? 'start' : 'end'} prevColor={prevColor} color={color} key={i} />)
         }
         prevColor = color;
         return arr;

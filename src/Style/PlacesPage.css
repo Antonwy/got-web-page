@@ -50,6 +50,14 @@
     width: calc(100% / 5);
 }
 
+.start {
+    align-self: flex-start;
+}
+
+.end {
+    align-self: flex-end;
+}
+
 .rotatetArrow {
     transform: rotate(180deg);
 }
