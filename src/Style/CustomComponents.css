@@ -28,24 +28,31 @@
     z-index: 100;
   }
   
-  .navBar img {
-    width: 100px;
-    cursor: pointer;
-  }
-  
-  .navMenu {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .navMenu * {
-    margin-left: 30px;
-    cursor: pointer;
-  }
-  
-  .navMenu img {
-    width: 20px;
-  }
+.navBar img {
+  width: 100px;
+  cursor: pointer;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: row;
+}
+
+.navMenu * {
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.navMenu img {
+  width: 20px;
+}
+
+.playMusic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
   @media only screen and (max-width: 600px) {
     body {

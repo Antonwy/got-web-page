@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './Style/HomePage.css';
-import Sound from 'react-sound';
-import MusicTheme from './Sound/main-theme.mp3'
 import NavBar from './Components/CustomComponents/NavBar';
 import HomePage from './Components/HomePage/HomePage';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
@@ -15,7 +13,7 @@ import PlacePage from './Components/PlacePage/PlacePage';
 class App extends Component {
 
   state = {
-    isVisible: false
+    isVisible: false,
   }
 
   componentDidMount(){
@@ -24,15 +22,9 @@ class App extends Component {
 
   render() {
     const {isVisible} = this.state;
-    console.log(process.env.PUBLIC_URL)
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
-          <Sound 
-            url={MusicTheme}
-            playStatus={Sound.status.PLAYING}
-            loop={true}
-          />
           <NavBar isVisible={isVisible}/>
           <Route exact path="/" component={HomePage}/>
           <Route path="/character" component={CharacterPage}/>
