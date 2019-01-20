@@ -92,7 +92,7 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/white-walker.e53ddf8f.jpg"
   },
   {
-    "revision": "7728d7197605222c9f6498a5260576f9",
+    "revision": "1347b09b3afda42c2498818f4ca50544",
     "url": "/got-web-page/index.html"
   }
 ];
