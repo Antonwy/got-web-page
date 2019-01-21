@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import posed from 'react-pose'
 
-import Volantis from '../../Images/volantis.jpg'
-
 const Container = posed.div({
     visible: {staggerChildren: 0},
     hidden: {staggerChildren: 100}

@@ -14,6 +14,7 @@ import OldValyria from '../../Images/old-valyria.png'
 import Quarth from '../../Images/quarth.jpg'
 import Dorne from '../../Images/dorne.png'
 import Volantis from '../../Images/volantis.jpg'
+import SecAnim from './SecAnim';
 
 const Places = [
   {
@@ -102,7 +103,7 @@ export default class PlacePage extends Component {
     }
 
   render() {
-      const {isVisible, animateBlock} = this.state;
+      const {isVisible, animateBlock, secondIndex} = this.state;
       const {place: {name, img}} = this.state;
       console.log(name, img)
       const anim = isVisible ? 'visible' : 'hidden';
@@ -110,7 +111,8 @@ export default class PlacePage extends Component {
       <div>
         <Background style={{backgroundImage: `url(${img})`}} pose={anim} className="bg placeBg"/>
         <PlaceHeader isVisible={animateBlock} anim={anim} transition={this.animateTransition} name={name} />
-        <BlockAnim animateBlock={animateBlock} img={Places[this.state.secondIndex].img} />
+        <BlockAnim animateBlock={animateBlock} img={Places[secondIndex].img} />
+        <SecAnim animateBlock={animateBlock} color={Places[secondIndex].color} />
       </div>
     )
   }
