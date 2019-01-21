@@ -70,7 +70,6 @@
     position: relative;
     width: calc(100% / 5);
     background-color: white;
-    z-index: 50;
 }
 
 .rotatetArrow {
