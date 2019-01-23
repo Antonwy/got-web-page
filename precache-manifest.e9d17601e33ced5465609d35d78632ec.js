@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "391a8db9f3d1d643ccef",
-    "url": "/got-web-page/static/css/main.ec594ccc.chunk.css"
+    "revision": "e6979f33dc2931b39cce",
+    "url": "/got-web-page/static/css/main.6b2cdc3d.chunk.css"
   },
   {
-    "revision": "391a8db9f3d1d643ccef",
-    "url": "/got-web-page/static/js/main.391a8db9.chunk.js"
+    "revision": "e6979f33dc2931b39cce",
+    "url": "/got-web-page/static/js/main.e6979f33.chunk.js"
   },
   {
-    "revision": "c0af88fb769128914fb4",
-    "url": "/got-web-page/static/js/1.c0af88fb.chunk.js"
+    "revision": "4127456728ba6a916959",
+    "url": "/got-web-page/static/js/1.41274567.chunk.js"
   },
   {
     "revision": "f0cc8438f3683b6155a1",
@@ -44,8 +44,12 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/got-logo.00b66283.svg"
   },
   {
-    "revision": "0aa4d20d0ca93d0ceec32362c8c7ec7d",
-    "url": "/got-web-page/static/media/search-icon.0aa4d20d.svg"
+    "revision": "e45451f74850da0b66ae141a957934e9",
+    "url": "/got-web-page/static/media/menu-icon.e45451f7.svg"
+  },
+  {
+    "revision": "310a810ce49387fdec6add7a199a2967",
+    "url": "/got-web-page/static/media/close-icon.310a810c.svg"
   },
   {
     "revision": "a321e87275aca0d481e5043242774e1e",
@@ -104,7 +108,7 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/white-walker.e53ddf8f.jpg"
   },
   {
-    "revision": "f944c64c7d83f19f32fae6053f15ec8c",
+    "revision": "3999c22761cc5486f9684ed6b8745d51",
     "url": "/got-web-page/index.html"
   }
 ];
