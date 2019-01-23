@@ -44,7 +44,6 @@ class NavBar extends Component {
 
   renderNavParagraphs = (x) => {
     const {isVisible} = this.props;
-    console.log(isVisible)
     return(
       <div>
         <Paragraph x={x} onClick={this.handleClick('/allCharacters')} delay={1} isVisible={isVisible}>Characters</Paragraph>
