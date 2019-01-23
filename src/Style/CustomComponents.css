@@ -68,6 +68,7 @@
   align-items: center;
   overflow: hidden;
   z-index: 300;
+  -webkit-backface-visibility: hidden;
 }
 
 .mobileNavMenu div {
