@@ -13,7 +13,7 @@ const characters = [
 const places = [
     "The Wall",
     "Dorne",
-    "Bravoos",
+    "Braavos",
     "Volantis"
 ]
 
@@ -24,10 +24,15 @@ const Header = posed.h3({
 
 const PopularLists = withRouter(({isVisible, history}) => {
 
-    const handleClick = (name) => {
+    const handleCharacterClick = (name) => {
         history.push({
-            pathname: '/character',
-            state: {character: name, withTransition: true}
+            pathname: '/character/' + name + '/' + true
+        })
+    }
+
+    const handlePlaceClick = (name) => {
+        history.push({
+            pathname: '/place/' + name
         })
     }
 
@@ -37,7 +42,7 @@ const PopularLists = withRouter(({isVisible, history}) => {
             <Header i={1} pose={isVisible ? 'visible' : 'hidden'}>Popular Characters:</Header>
             {
                 characters.map((item, i) => {
-                    return <Paragraph key={i} onClick={() => (handleClick(item))} x={true} delay={i + 2} isVisible={isVisible}>{item}</Paragraph>
+                    return <Paragraph key={i} onClick={() => (handleCharacterClick(item))} x={true} delay={i + 2} isVisible={isVisible}>{item}</Paragraph>
                 })
             }
         </div>
@@ -45,7 +50,7 @@ const PopularLists = withRouter(({isVisible, history}) => {
             <Header i={6} pose={isVisible ? 'visible' : 'hidden'}>Popular Places:</Header>
             {
                 places.map((item, i) => {
-                    return <Paragraph key={i} onClick={handleClick} x={true} delay={i + 7} isVisible={isVisible}>{item}</Paragraph>
+                    return <Paragraph key={i} onClick={() => handlePlaceClick(item)} x={true} delay={i + 7} isVisible={isVisible}>{item}</Paragraph>
                 })
             }
         </div>

@@ -15,13 +15,14 @@ export default class CharacterPage extends Component {
 
     state = {
         isVisible: false,
-        character: this.props.location.state.character,
+        character: this.props.match.params.name,
         background: Daenerys,
         showVideo: false
     }
 
     componentDidMount(){
         this.setState({isVisible: true, background: this.chooseImage()})
+        console.log(this.props)
     }
 
     chooseImage = () => {
@@ -40,18 +41,16 @@ export default class CharacterPage extends Component {
     }
 
     handleVideoClick = (character) => () => {
-        console.log('CLICK')
         this.setState({showVideo: true})
     }
 
     hideVideo = () => {
-        console.log('CLICK')
         this.setState({showVideo: false})
     }
 
     checkTransition = () => {
         const {isVisible} = this.state;
-        const transition = this.props.location.state.withTransition;
+        const transition = this.props.match.params.transition === 'false' ? false : true;
         if (isVisible && transition) {
             return 'visible';
         }else if(!transition){

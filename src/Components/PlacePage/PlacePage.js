@@ -66,12 +66,25 @@ const Places = [
 
 export default class PlacePage extends Component {
 
+    getPlace = () => {
+      let placeIndex = Places.findIndex(obj => {
+        return obj.name === this.props.match.params.name
+      })
+      return Places[placeIndex]
+    }
+
+    getIndex = () => {
+      return Places.findIndex(obj => {
+        return obj.name === this.props.match.params.name
+      })
+    }
+
     state = {
         isVisible: false,
         animateBlock: false,
-        place: Places[0],
-        currIndex: 0,
-        secondIndex: 0
+        place: this.getPlace(),
+        currIndex: this.getIndex(),
+        secondIndex: this.getIndex(),
     }
 
     componentDidMount() {
@@ -105,7 +118,6 @@ export default class PlacePage extends Component {
   render() {
       const {isVisible, animateBlock, secondIndex} = this.state;
       const {place: {name, img}} = this.state;
-      console.log(name, img)
       const anim = isVisible ? 'visible' : 'hidden';
     return (
       <div>

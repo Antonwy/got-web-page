@@ -47,8 +47,7 @@ class CharacterItem extends React.Component {
     this.setState({clicked: true})
     setTimeout(() => {
       this.props.history.push({
-        pathname: '/character',
-        state: {character: this.props.character.name, withTransition: false}
+        pathname: '/character/' + this.props.character.name + '/' + false,
       })
     }, 300)
   }

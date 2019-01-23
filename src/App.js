@@ -27,9 +27,9 @@ class App extends Component {
         <div className="App">
           <NavBar isVisible={isVisible}/>
           <Route exact path="/" component={HomePage}/>
-          <Route path="/character" component={CharacterPage}/>
+          <Route path="/character/:name/:transition" component={CharacterPage}/>
           <Route path="/allCharacters" component={AllCharactersPage} />
-          <Route path="/place" component={PlacePage} />
+          <Route path="/place/:name" component={PlacePage} />
           <Route path="/about" component={AboutPage} />
         </div>
       </Router>
