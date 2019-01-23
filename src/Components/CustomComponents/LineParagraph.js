@@ -21,7 +21,7 @@ const lineStyle = {
 }
 
 const Line = posed.div({
-  visible: {width: "75px", transition: { duration: 500, delay: 250 }},
+  visible: {width: "50px", transition: { duration: 500, delay: 250 }},
   hidden: {width: 0}
 })
 
@@ -36,7 +36,7 @@ const pStyle = {
 
 const LineParagraph = ({text, isVisible}) => {
   return (
-    <div style={container}>
+    <div style={container} className="lineParagraph">
       <Line pose={isVisible ? 'visible' : 'hidden'} style={lineStyle}></Line>
       <Text pose={isVisible ? 'visible' : 'hidden'} style={pStyle}>{text}</Text>
     </div>
