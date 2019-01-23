@@ -19,7 +19,7 @@ const LogoAnim = posed.div({
 }) 
 
 const MobileNavMenu = posed.div({
-  visible: {height: '100%'},
+  visible: {height: '100vh'},
   hidden: {height: '0%'}
 })
 
