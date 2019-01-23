@@ -1,7 +1,7 @@
 {
   "main.css": "/got-web-page/static/css/main.ec594ccc.chunk.css",
-  "main.js": "/got-web-page/static/js/main.641bc74a.chunk.js",
-  "main.js.map": "/got-web-page/static/js/main.641bc74a.chunk.js.map",
+  "main.js": "/got-web-page/static/js/main.185e9858.chunk.js",
+  "main.js.map": "/got-web-page/static/js/main.185e9858.chunk.js.map",
   "static/js/1.c0af88fb.chunk.js": "/got-web-page/static/js/1.c0af88fb.chunk.js",
   "static/js/1.c0af88fb.chunk.js.map": "/got-web-page/static/js/1.c0af88fb.chunk.js.map",
   "runtime~main.js": "/got-web-page/static/js/runtime~main.f0cc8438.js",
@@ -30,6 +30,6 @@
   "static/media/AboutPage.css": "/got-web-page/static/media/white-walker.e53ddf8f.jpg",
   "static/css/main.ec594ccc.chunk.css.map": "/got-web-page/static/css/main.ec594ccc.chunk.css.map",
   "index.html": "/got-web-page/index.html",
-  "precache-manifest.6ac99991697df3324301680cb6a3e03b.js": "/got-web-page/precache-manifest.6ac99991697df3324301680cb6a3e03b.js",
+  "precache-manifest.1db5ab572eb9bf7764cea08fe87d3286.js": "/got-web-page/precache-manifest.1db5ab572eb9bf7764cea08fe87d3286.js",
   "service-worker.js": "/got-web-page/service-worker.js"
 }
