@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e6979f33dc2931b39cce",
-    "url": "/got-web-page/static/css/main.6b2cdc3d.chunk.css"
+    "revision": "4f0cd186c3d477ba0801",
+    "url": "/got-web-page/static/css/main.7050ed49.chunk.css"
   },
   {
-    "revision": "e6979f33dc2931b39cce",
-    "url": "/got-web-page/static/js/main.e6979f33.chunk.js"
+    "revision": "4f0cd186c3d477ba0801",
+    "url": "/got-web-page/static/js/main.4f0cd186.chunk.js"
   },
   {
     "revision": "4127456728ba6a916959",
@@ -108,7 +108,7 @@ self.__precacheManifest = [
     "url": "/got-web-page/static/media/white-walker.e53ddf8f.jpg"
   },
   {
-    "revision": "3999c22761cc5486f9684ed6b8745d51",
+    "revision": "8b9e65d5115c67f61eb152d0c9386de9",
     "url": "/got-web-page/index.html"
   }
 ];
