@@ -25,7 +25,7 @@ const Paragraph = (props) => {
             props.x ?
                 <ParAnimX onClick={props.onClick} i={props.delay} pose={props.isVisible ? 'visible' : 'hidden'} className="underlineParagraph">{props.children}</ParAnimX>
                 :
-                <ParAnimY onClick={props.onClick} i={props.delay} pose={props.isVisible ? 'visible' : 'hidden'} className="underlineParagraph">{props.children}</ParAnimY>
+                <ParAnimY onClick={props.onClick} i={props.delay} pose={props.isVisible ? 'visible' : 'hidden'} className="underlineParagraph yAnim">{props.children}</ParAnimY>
         }
       </div>
   )

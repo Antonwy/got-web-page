@@ -7,12 +7,20 @@ const Container = posed.h1({
   hidden: {opacity: 0}
 })
 
-const PlaceHeader = ({transition, name, isVisible}) => {
+const Desc = posed.p({
+  visible: {opacity: 1},
+  hidden: {opacity: 0}
+})
+
+const PlaceHeader = ({transition, name, isVisible, desc}) => {
   return (
-    <div className="placeHeader">
-      <img src={Arrow} alt='arrow' onClick={transition(1)}/>
-      <Container pose={isVisible ? 'hidden' : 'visible'}>{name}</Container>
-      <img className="rotatetArrow" src={Arrow} alt='arrow' onClick={transition(-1)}/>
+    <div>
+      <div className="placeHeader">
+        <img src={Arrow} alt='arrow' onClick={transition(1)}/>
+        <Container pose={isVisible ? 'hidden' : 'visible'}>{name}</Container>
+        <img className="rotatetArrow" src={Arrow} alt='arrow' onClick={transition(-1)}/>
+      </div>
+      <Desc className="placeDescription" pose={isVisible ? 'hidden' : 'visible'}>{desc}</Desc>
     </div>
   )
 }

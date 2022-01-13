@@ -5,22 +5,24 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    z-index: -50;
 }
 
 .carousel {
-    display: inline-flex;
-    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
+    z-index: -2;
 }
 
 .characterItem {
     position: absolute;
     width: 400px;
     max-width: 400px;
-    top: 120%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -30,7 +32,8 @@
 }
 
 .characterItem h2 {
-    font-family: 'Cormorant SC', serif;
+    font-size: 50px;
+    font-weight: 700;
 }
 
 .characterItem p {
@@ -50,6 +53,7 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.199);
 }
 
 .characterImgButtons {
@@ -63,4 +67,8 @@
 
 .characterImgButtons img {
     padding: 30px;
+}
+
+button {
+    z-index: 20;
 }

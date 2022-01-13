@@ -18,14 +18,19 @@ h1 {
     background-size: cover;
 }
 
+.characterHeader {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .characterHeader span {
-    text-decoration: underline;
     cursor: pointer;
 }
 
-.characterHeader p {
-    font-family: 'Cormorant SC', serif;
-    font-size: 1.5em;
+.here {
+    text-decoration: underline;
 }
 
 .characterInfo {
@@ -84,4 +89,59 @@ h1 {
     height: 100%;
     background-color: rgb(27, 27, 27);
     z-index: 200; 
+}
+
+.shortCharacterInfo {
+    margin-bottom: 100px;
+}
+
+.shortCharacterInfo>p {
+    font-family: 'Montserrat', sans-serif;
+    width: 50%;
+}
+
+.characterHeader button {
+    height: 35px;
+    border: white 3px solid;
+    outline: none;
+    background: none;
+    color: white;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-weight: bolder;
+    position: relative;
+    transition: color 250ms, border-radius 250ms;
+    margin: 20px;
+}
+
+.characterHeader button:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    z-index: -2;
+    transition: width 250ms;
+}
+
+.characterHeader button:hover:before {
+    width: 100%;
+}
+
+.characterHeader button:hover {
+    color: black;
+    border-radius: 5px;
+}
+
+.shortCharacterInfo>div {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.watchVid {
+    font-weight: 700;
 }

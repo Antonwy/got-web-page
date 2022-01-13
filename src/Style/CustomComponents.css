@@ -2,21 +2,29 @@
   position: relative;
   cursor: pointer;
   display: table;
+  transition: color 250ms 250ms;
 }
 
-.underlineParagraph:before {
+.yAnim:before {
   content: " ";
   position: absolute;
-  left: 0;
-  bottom: -5px;
+  left: -10px;
+  bottom: -10px;
   width: 0%;
   height: 3px;
-  transition: width 250ms;
-  background-color: rgb(87, 173, 244);
+  transition: width 250ms, height 250ms 250ms;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  z-index: -2;
 }
 
-.underlineParagraph:hover:before {
-  width: 100%;
+.yAnim:hover:before {
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+}   
+
+.yAnim:hover {
+  color: black;
 }   
 
 .navBar {

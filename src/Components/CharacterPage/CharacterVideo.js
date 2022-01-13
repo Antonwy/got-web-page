@@ -12,10 +12,6 @@ const Background = posed.div({
     hidden: {opacity: 0}
 })
 
-const Video = posed.iframe({
-    visible: {opacity: 1, delay: 500},
-    hidden: {opacity: 0}
-})
 
 const CharacterVideo = ({character, showVideo, hideVideo}) => {
 
@@ -23,35 +19,12 @@ const CharacterVideo = ({character, showVideo, hideVideo}) => {
         hideVideo();
     }
 
-    const getVideo = () => {
-        let id = 'uuDu43Gnyts';
-        switch (character) {
-            case 'Jon Snow':
-                id = 'uuDu43Gnyts'
-                break;
-            case 'Arya Stark':
-                id = 'yMAmQhkkn4k'
-                break;
-            case 'Daenerys Targaryen':
-                id = 'wpYL7kO0WmA'
-                break;
-            case 'Tyrion Lannister':
-                id = 'J1TL-EQWtvo'
-                break;
-            
-            default:
-                id = 'uuDu43Gnyts'
-                break;
-        }
-        return id;
-    }
-
     const anim = showVideo ? 'visible' : 'hidden';
     return (
         <Background style={{pointerEvents: showVideo ? 'all' : 'none'}} onClick={click} pose={anim} className="videoBack">
             <Container pose={anim} className="characterVideo">
                 { showVideo ? <Youtube
-                    videoId={getVideo()}
+                    videoId={character.video}
                     className={`video`}
                     containerClassName={`video`}
                 />

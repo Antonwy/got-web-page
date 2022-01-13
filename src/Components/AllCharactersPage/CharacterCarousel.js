@@ -1,75 +1,89 @@
 import React from 'react'
-import posed from 'react-pose'
+import * as contentful from 'contentful'
 
-import Daenerys from '../../Images/daenerys.jpg'
-import Jon from '../../Images/jon-snow.jpeg'
-import Arya from '../../Images/arya-stark.jpg'
-import Tyrion from '../../Images/tyrion-lannister.png'
 import CharacterItem from './CharacterItem';
-
-const characterInfo = [
-    {
-        pos: 0,
-        name: "Tyrion Lannister",
-        description: "Lord Tyrion Lannister is the youngest child of Lord Tywin Lannister and younger brother of Cersei and Jaime Lannister. A dwarf, he uses his wit and intellect to overcome the prejudice he faces.",
-        image: Tyrion   
-    },
-    {
-        pos: 1,
-        name: "Jon Snow",
-        description: "Jon Snow, born Aegon Targaryen, is the son of Lyanna Stark and Rhaegar Targaryen, the late Prince of Dragonstone. From infancy, Jon is presented as the bastard son of Lord Eddard Stark, Lyanna's brother, and raised by Eddard alongside his lawful children at Winterfell but his true parentage is kept secret from everyone, including Jon himself.",
-        image: Jon
-    },
-    {
-        pos: 2,
-        name: "Arya Stark",
-        description: "Arya Stark is the third child and second daughter of Lord Eddard Stark and his wife, Lady Catelyn Stark. After narrowly escaping the persecution of House Stark by House Lannister, Arya is trained as a Faceless Man at the House of Black and White in Braavos, and uses her new skills to bring those who have wronged her family to justice.",
-        image: Arya
-    },
-    {
-        pos: 3,
-        name: "Daenerys Targaryen",
-        description: "Queen Daenerys Targaryen, also known as Dany and Daenerys Stormborn, is the younger sister of Rhaegar Targaryen and Viserys Targaryen and only daughter of King Aerys II Targaryen and Queen Rhaella Targaryen, who were both ousted from the Iron Throne during Robert Baratheon's rebellion.",
-        image: Daenerys
-    }
-]
-
 
 
 class CharacterCarousel extends React.Component {
 
+    client = contentful.createClient({
+        space: process.env.REACT_APP_SPACE_ID,
+        accessToken: process.env.REACT_APP_ACCESS_TOKEN
+    })
+
     state = {
-        characterInfo: characterInfo
+        characterInfo: undefined
+    }
+
+    componentDidMount() {
+        this.client.getEntries({
+            'content_type': 'gotCharacter'
+        })
+        .then(entries => {
+
+            let array = [...entries.items];
+
+            array.forEach((item, i) => {
+                item.pos = i
+            })
+            this.setState({
+                characterInfo: array
+            })
+        })
     }
 
     handleClick = (dir) => () => {
-        const info = this.state.characterInfo;
-        console.log(info.length)
-        const newArray = [...info]
+        if(dir > 0) {
+            this.leftRotate()
+        }else {
+            this.rightRotate()
+        }
+    }
 
-        info.forEach((el, i) => {
-            let {pos} = el;
-            if(pos === 3){
-                newArray[i].pos = dir > 0 ? 0 : 2;
-            }else if(pos === 0){
-                newArray[i].pos = dir > 0 ? 1 : 3; 
-            }else {
-                newArray[i].pos += dir;
-            }
-        });
-        this.setState({characterInfo: newArray})
+    leftRotate = () => {
+        let info = this.state.characterInfo
+        let arr = info.slice(0)
+        let temp = info[0].pos; 
+        let i;
+		for (i = 0; i < info.length - 1; i++) 
+			arr[i].pos = arr[i + 1].pos; 
+        arr[i].pos = temp; 
+        this.setState({characterInfo: arr})
+    }
 
+    rightRotate = () => {
+        let info = this.state.characterInfo;
+        let arr = info.slice(0)
+        let temp = info[info.length - 1].pos; 
+        let i;
+		for (i = 1; i < info.length; i++) {
+			arr[info.length - i].pos = info[info.length - 1 - i].pos; 
+        }
+        arr[0].pos = temp;
+        this.setState({characterInfo: arr})
     }
 
     renderItems = () => {
         const obj = [];
-        characterInfo.forEach((item, i) => (
-            obj.push(<CharacterItem key={i} handleClick={this.handleClick} isVisible={this.props.isVisible} character={item}/>)
+        this.state.characterInfo.forEach((item, i) => (
+            obj.push(<CharacterItem 
+                key={i} 
+                handleClick={this.handleClick} 
+                isVisible={this.props.isVisible} 
+                pos={item.pos} 
+                character={item.fields}
+                list={this.props.list}
+            />)
         ))
         return obj;
     }
 
     render() {
+
+        if(!this.state.characterInfo) {
+            return <h1>Loading...</h1>
+        }
+
         return (
             <div className="carousel">
                 {

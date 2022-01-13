@@ -8,7 +8,7 @@ import AllCharactersPage from './Components/AllCharactersPage/AllCharactersPage'
 import AboutPage from './Components/AboutPage/AboutPage';
 import PlacePage from './Components/PlacePage/PlacePage';
 
-
+require('dotenv').config();
 
 class App extends Component {
 

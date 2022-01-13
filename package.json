@@ -2,9 +2,10 @@
   "name": "got-web-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://antonwy.github.io/got-web-page",
   "dependencies": {
     "axios": "^0.18.0",
+    "contentful": "^7.6.0",
+    "dotenv": "^8.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-pose": "^4.0.5",

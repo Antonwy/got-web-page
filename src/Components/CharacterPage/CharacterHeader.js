@@ -8,11 +8,17 @@ const Header = posed.h1({
     hidden: {opacity: 0, x: -100}
 })
 
+const Description = posed.p({
+    visible: {opacity: 1, x: 0, transition: {duration: 500}, delay: 250},
+    hidden: {opacity: 0, x: -100}
+})
+
 const UList = posed.ul({
     visible: {
         staggerChildren: 100,
+        x: 0
     },
-    hidden: {}
+    hidden: {x: -100}
 })
 
 const ListItem = posed.li({
@@ -34,11 +40,13 @@ class CharacterHeader extends React.Component {
 
     state = {
         character: undefined,
-        isVisible: false
+        isVisible: false,
+        showMore: false,
+        animateMore: false,
     }
 
     componentDidMount(){
-        Axios.get(`https://www.anapioficeandfire.com/api/characters?name=${this.props.character}`)
+        Axios.get(`https://www.anapioficeandfire.com/api/characters?name=${this.props.character.name}`)
             .then(res => {
                 this.setState({
                     character: this.getData(res.data),
@@ -85,8 +93,15 @@ class CharacterHeader extends React.Component {
         }
     }
 
+    handleShowMore = () => {
+        this.setState({showMore: !this.state.showMore}, () => {
+            this.setState({animateMore: this.state.showMore})
+        })
+    }
+
     render() {
-        const {character, isVisible} = this.state;
+        const {character, isVisible, showMore, animateMore} = this.state;
+        console.log(character)
         const anim = isVisible ? 'visible' : 'hidden';
         return (
             <div>
@@ -94,37 +109,48 @@ class CharacterHeader extends React.Component {
                     character ?
                     <div className="characterHeader">
                         <Header pose={anim}>{character.name}</Header>
-                        <VideoButton pose={anim}>Watch the Video <span onClick={this.props.handleClick(character)}>here</span>.</VideoButton>
-                        <div>
-                            <UList pose={anim} className="characterInfo">
-                                <BigListItem>
-                                    <li><span>Aliases:</span></li>
-                                    <UList pose={anim}>
-                                        {character.aliases.map((item, i) => {
-                                            return <ListItem key={i}>{item}</ListItem>
-                                        })}
-                                    </UList>
-                                    <li><span>Titles:</span></li>
-                                    <UList pose={anim}>
-                                        {character.titles.map((item, i) => {
-                                            return <ListItem key={i}>{item}</ListItem>
-                                        })}
-                                    </UList>
-                                </BigListItem>
-                                <BigListItem>
-                                    <li><span>Gender: </span>{character.gender}</li>
-                                    <li><span>Born: </span>{character.born}</li>
-                                    <li><span>Culture: </span>{character.culture}</li>
-                                    <li><span>Played by: </span>{character.playedBy[0]}</li>
-                                    <li><span>Tv-Series:</span></li>
-                                    <UList pose={anim}>
-                                        {character.tvSeries.map((item, i) => {
-                                            return <ListItem key={i}>{item}</ListItem>
-                                        })}
-                                    </UList>
-                                </BigListItem>
-                            </UList>
-                        </div>
+                        {
+                            showMore ? 
+                            <div>
+                                <UList pose={animateMore ? "visible" : "hidden"} className="characterInfo">
+                                    <BigListItem>
+                                        <li><span>Aliases:</span></li>
+                                        <UList>
+                                            {character.aliases.map((item, i) => {
+                                                return <ListItem key={i}>{item}</ListItem>
+                                            })}
+                                        </UList>
+                                        <li><span>Titles:</span></li>
+                                        <UList>
+                                            {character.titles.map((item, i) => {
+                                                return <ListItem key={i}>{item}</ListItem>
+                                            })}
+                                        </UList>
+                                    </BigListItem>
+                                    <BigListItem>
+                                        <li><span>Gender: </span>{character.gender}</li>
+                                        <li><span>Born: </span>{character.born}</li>
+                                        <li><span>Culture: </span>{character.culture}</li>
+                                        <li><span>Played by: </span>{character.playedBy[0]}</li>
+                                        {/* <li><span>Tv-Series:</span></li>
+                                        <UList pose={anim}>
+                                            {character.tvSeries.map((item, i) => {
+                                                return <ListItem key={i}>{item}</ListItem>
+                                            })}
+                                        </UList> */}
+                                    </BigListItem>
+                                </UList>
+                                <button onClick={this.handleShowMore}>LESS</button>
+                            </div>
+                            :
+                            <div className="shortCharacterInfo">
+                                <Description pose={anim}>{this.props.character.description}</Description>
+                                <div>
+                                    <VideoButton className="watchVid" pose={anim}>Watch the Video <span onClick={this.props.handleClick(character)} className="here">here</span>.</VideoButton>
+                                    <button onClick={this.handleShowMore}>MORE</button>
+                                </div>
+                            </div>
+                        }
                     </div>
                     :
                     <div></div>

@@ -75,3 +75,12 @@
 .rotatetArrow {
     transform: rotate(180deg);
 }
+
+.placeDescription {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, .9);
+}
